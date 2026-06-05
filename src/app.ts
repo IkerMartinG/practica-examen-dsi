@@ -8,11 +8,14 @@ import "./db/mongoose.js";
 // import { recordRouter } from "./routes/record.js"
 // import { defaultRouter } from "./routes/default.js";
 
+import { SpaceCraftRouter } from "./routes/spacecraft.js";
+
 
 export const app = express();
 
 app.use(express.json());
 
+app.use(SpaceCraftRouter);
 
 // app.use(medicationRouter);
 // app.use(patientRouter);
