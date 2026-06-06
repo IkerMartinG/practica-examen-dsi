@@ -9,6 +9,7 @@ import "./db/mongoose.js";
 // import { defaultRouter } from "./routes/default.js";
 
 import { SpaceCraftRouter } from "./routes/spacecraft.js";
+import { passengerRouter } from "./routes/passenger.js"
 
 
 export const app = express();
@@ -16,6 +17,7 @@ export const app = express();
 app.use(express.json());
 
 app.use(SpaceCraftRouter);
+app.use(passengerRouter);
 
 // app.use(medicationRouter);
 // app.use(patientRouter);
